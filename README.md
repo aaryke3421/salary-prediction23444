@@ -1,136 +1,128 @@
+salary prediction 
+<h1 align="center">💼 Salary Prediction App</h1>
 
-# Salary Prediction 🚀
+<p align="center">
+  🚀 A web-based ML application to predict salaries using Ensemble Learning and Streamlit.
+</p>
 
-## Overview
+---
 
-A machine learning application that predicts an individual's salary based on features such as years of experience, education level, job title, etc. The model is deployed via a Streamlit web app to provide interactive salary estimates.
+## 📌 Table of Contents
 
-## Table of Contents
+- [Overview](#rocket-overview)
+- [Features](#-features)
+- [Tech Stack](#️-technologies-used)
+- [Installation](#clipboard-installation)
+- [Usage](#-usage)
+- [Project Structure](#-project-structure)
+- [Live Deployment](#-live-deployment)
+- [Contribution](#-contribution)
+- [Author](#-author)
 
-* [Features](#features)
-* [Dataset](#dataset)
-* [Prerequisites](#prerequisites)
-* [Installation](#installation)
-* [Usage](#usage)
-* [Project Structure](#project-structure)
-* [Model Details](#model-details)
-* [Performance](#performance)
-* [Example](#example)
-* [Contributing](#contributing)
-* [License & Acknowledgements](#license--acknowledgements)
+---
 
-## Features
+## 🚀 Overview
 
-* Trains a regression model (e.g. Linear Regression, Random Forest, XGBoost) to estimate salary
-* Interactive web app using Streamlit for real-time predictions
-* Includes data preprocessing, feature engineering, visualization, and evaluation
+The **Salary Prediction App** is an interactive web platform developed using **Streamlit**. It leverages an **ensemble machine learning model** to estimate salaries based on user inputs such as **age, education level, years of experience, and job title**.
 
-## Dataset
+It showcases the **complete ML pipeline** — from data preprocessing to model deployment — with real-time salary predictions.
 
-* Sourced from \[Kaggle / StackOverflow Developer Survey / Custom Data] (update link accordingly)
-* Contains features such as:
+---
 
-  * `YearsExperience`
-  * `EducationLevel`
-  * `JobTitle`
-  * `Location`
-  * `Salary` (target variable)
+## ✨ Features
 
-## Prerequisites
+- 📊 **Interactive Interface** – Real-time predictions using Streamlit.
+- 🧠 **Ensemble Learning** – Combines multiple models for improved accuracy.
+- 📂 **Real Dataset** – Uses `Salary_Data.csv` for training.
+- 📈 **Model Comparison & Analysis** – Done via Jupyter Notebooks.
+- 📥 **Accepts user input** – Age, Experience, Education, Job Title.
 
-* Python 3.10+
-* Virtual environment tool (venv, conda, or Poetry)
+---
 
-## Installation
+## 🛠️ Technologies Used
+
+| Purpose              | Tools / Libraries               |
+|----------------------|---------------------------------|
+| *Frontend*           | Streamlit                       |
+| *Backend*            | Python                          |
+| *ML & Data Analysis* | pandas, numpy, scikit-learn     |
+| *Visualization*      | matplotlib, seaborn             |
+| *Environment*        | venv (Python Virtual Env)       |
+
+---
+
+## 📋 Installation
+
+### ✅ Prerequisites
+
+- Python ≥ 3.8
+- pip installed on your system
+
+### 📦 Setup Instructions
 
 ```bash
-git clone https://github.com/aaryke3421/salary‑prediction23444.git
-cd salary‑prediction23444
+# Step 1: Clone the repository
+git clone https://github.com/aaryke3421/salary-prediction23444.git
+cd salary-prediction23444
 
-# Option A: venv
-python3 -m venv .venv
-source .venv/bin/activate
+# Step 2: Create and activate a virtual environment
+# Windows
+python -m venv venv
+venv\Scripts\activate
 
-# Option B: conda
-conda create -n salary-pred python=3.10
-conda activate salary-pred
+# macOS/Linux
+python3 -m venv venv
+source venv/bin/activate
 
+# Step 3: Install dependencies
 pip install -r requirements.txt
-```
+````
 
-## Usage
+---
+
+## 🏃 Usage
+
+To launch the app locally, run:
 
 ```bash
-# Launch the Streamlit app:
 streamlit run app.py
 ```
 
-* Visit the URL shown in the console (typically `localhost:8501`).
-* Input the relevant features (e.g., experience, degree) and receive a salary estimate.
-* Results include visual plots like feature importance and prediction distribution.
+Then open your browser and go to:
+👉 [http://localhost:8501](http://localhost:8501)
 
-## Project Structure
+Use the sidebar to enter your inputs and receive a salary prediction instantly.
+
+---
+
+## 📂 Project Structure
 
 ```
-salary-prediction23444/
-│
-├── data/
-│   └── salary_data.csv       # Raw dataset
-│
-├── src/
-│   ├── preprocess.py         # Data cleaning & feature engineering
-│   ├── train_model.py        # Model training, tuning & validation
-│   └── predict.py            # Utility for making single predictions
-│
-├── app.py                    # Streamlit web application
-├── requirements.txt          # Library dependencies
-├── README.md                 # Project documentation
-└── saved_model.joblib        # Trained model (if included)
-```
+📁 salary-prediction23444/
+├── app.py
+├── requirements.txt
+├── Salary_Data.csv
+├── salary_prediction_model.pkl
+├── notebooks/
+│   ├── Model_Training.ipynb
+│   └── Final_Model_Evaluation.ipynb
+├── README.md
+└── .gitignore
+`---
 
-## Model Details
+## 🤝 Contribution
 
-* Explored several algorithms: Linear Regression, Random Forest, XGBoost.
-* Performed hyperparameter tuning via GridSearchCV.
-* Selected the best-performing model based on RMSE and training time.
+🙌 Pull requests are welcome!
+If you find bugs or want to suggest improvements, please [open an issue](https://github.com/aaryke3421/salary-prediction23444/issues) or submit a PR.
 
-## Performance
+---
 
-* Baseline RMSE: *e.g.* 4000
-* Best model (e.g., Random Forest): RMSE ≈ *3500*
-* Validation metrics include MAE, RMSE, R²
-* Visualizations of feature importances illustrate which inputs most influence salary predictions
+## 👨‍💻 Author
 
-## Example
+**Aarya Keshari**
+🔗 [GitHub Profile](https://github.com/aaryke3421)
 
-Predict salary for an individual with:
-
-* 5 years of experience
-* Bachelor's degree
-* Software Engineer role
-
-The app would return a predicted annual salary, e.g. **₹ 6,50,000**.
-
-## Contributing
-
-Contributions are welcome!
-
-* Fork the repository and submit PRs for enhancements like:
-
-  * Incorporating new features (e.g., skill set, location)
-  * Expanding model options
-  * Adding unit or integration tests
-
-Please adhere to the existing coding style and include documentation where necessary.
-
-## License & Acknowledgements
-
-* This project is licensed under the [MIT License](LICENSE) (update if different).
-* Dataset credit to \[Kaggle / StackOverflow] or \[original provider].
-* Inspired by similar public projects and best practices in ML deployment ([github.com][1], [github.com][2], [github.com][3], [github.com][4], [reddit.com][5]).
-### Why this works
-
-* A structured, clear README enhances readability and increases the professionalism of your repo.
-* It helps maintainers or recruiters quickly understand how to run and evaluate your project.
-* Including visual aids, evaluation metrics, and a demo yields a stronger portfolio impression ---
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:9b00e8,100:6e44ff&height=100&section=footer"/>
+</p>
 
