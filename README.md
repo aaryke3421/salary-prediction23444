@@ -120,9 +120,5 @@ If you find bugs or want to suggest improvements, please [open an issue](https:/
 ## 👨‍💻 Author
 
 **Aarya Keshari**
-🔗 [GitHub Profile](https://github.com/aaryke3421)
-
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:9b00e8,100:6e44ff&height=100&section=footer"/>
 </p>
 
