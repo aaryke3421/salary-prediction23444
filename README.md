@@ -60,12 +60,9 @@ It showcases the **complete ML pipeline** — from data preprocessing to model d
 
 ### 📦 Setup Instructions
 
-```bash
-# Step 1: Clone the repository
-git clone https://github.com/aaryke3421/salary-prediction23444.git
-cd salary-prediction23444
+`steps as follows 
 
-# Step 2: Create and activate a virtual environment
+# Step 1: Create and activate a virtual environment
 # Windows
 python -m venv venv
 venv\Scripts\activate
@@ -74,7 +71,8 @@ venv\Scripts\activate
 python3 -m venv venv
 source venv/bin/activate
 
-# Step 3: Install dependencies
+# Step 2:
+Install dependencies
 pip install -r requirements.txt
 ````
 
